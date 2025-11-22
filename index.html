@@ -1,162 +1,145 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.44">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    span.s1 {font: 12.0px 'Lucida Grande'}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Your Art Studio</title>
+
+<style>
+  /* -------- RESET -------- */
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body, html { height:100%; font-family: "Helvetica Neue", Arial, sans-serif; }
+
+  /* -------- FULLSCREEN LANDING -------- */
+  .hero {
+    height:100vh;
+    width:100%;
+    background:url('YOUR-IMAGE.jpg') center/cover no-repeat; /* ← Replace with your image */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+  }
+
+  .logo {
+    max-width:260px; /* adjust size */
+    margin-bottom:28px;
+  }
+
+  /* -------- NAV TABS -------- */
+  .tabs {
+    display:flex;
+    gap:24px;
+    font-size:18px;
+    font-weight:600;
+  }
+
+  .tabs a {
+    color:white;
+    text-decoration:none;
+    padding:8px 14px;
+    border:2px solid rgba(255,255,255,0.7);
+    border-radius:6px;
+    backdrop-filter: blur(3px);
+    transition:0.25s;
+  }
+
+  .tabs a:hover {
+    background:rgba(255,255,255,0.25);
+  }
+
+  /* -------- SECTIONS -------- */
+  section {
+    padding:80px 24px;
+    max-width:900px;
+    margin:auto;
+  }
+
+  h2 { 
+    font-size:36px; 
+    font-weight:800; 
+    margin-bottom:18px; 
+    text-align:center; 
+  }
+  p { 
+    line-height:1.6; 
+    font-size:18px; 
+    text-align:center;
+    max-width:700px;
+    margin:auto;
+  }
+
+  /* Simple contact form */
+  form {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    max-width:480px;
+    margin:30px auto 0 auto;
+  }
+  input, textarea {
+    padding:12px;
+    font-size:16px;
+    border-radius:6px;
+    border:1px solid #ccc;
+  }
+  button {
+    padding:12px;
+    font-size:16px;
+    border:none;
+    border-radius:6px;
+    background:black;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+  }
+  button:hover {
+    background:#333;
+  }
+</style>
 </head>
+
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
-<p class="p1">&lt;title&gt;Your Art Studio&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* -------- RESET -------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>* { box-sizing:border-box; margin:0; padding:0; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>body, html { height:100%; font-family: "Helvetica Neue", Arial, sans-serif; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* -------- FULLSCREEN LANDING -------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.hero {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>height:100vh;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:url('YOUR-IMAGE.jpg') center/cover no-repeat; /* <span class="s1">←</span> Replace with your image */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex-direction:column;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>justify-content:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>position:relative;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.logo {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width:260px; /* adjust size */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:28px;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* -------- NAV TABS -------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tabs {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap:24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:18px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight:600;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tabs a {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-decoration:none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:8px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border:2px solid rgba(255,255,255,0.7);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>backdrop-filter: blur(3px);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>transition:0.25s;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>.tabs a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:rgba(255,255,255,0.25);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* -------- SECTIONS -------- */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>section {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:80px 24px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width:900px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>h2 {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:36px;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight:800;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:18px;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>p {<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>line-height:1.6;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:18px;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width:700px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>/* Simple contact form */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>form {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>flex-direction:column;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gap:12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width:480px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:30px auto 0 auto;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>input, textarea {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border:none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:6px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:black;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight:600;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#333;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- HERO --&gt;</p>
-<p class="p1">&lt;div class="hero" id="top"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;img src="YOUR-LOGO.png" alt="Studio Logo" class="logo"&gt; &lt;!-- Replace logo --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tabs"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#about"&gt;About&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#portfolio"&gt;Portfolio&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- ABOUT --&gt;</p>
-<p class="p1">&lt;section id="about"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;About&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>Write a short intro about your art studio here — your style, medium,</p>
-<p class="p1"><span class="Apple-converted-space">    </span>philosophy, or background. Keep it warm, simple, and inviting.</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- PORTFOLIO --&gt;</p>
-<p class="p1">&lt;section id="portfolio"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Portfolio&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Add your artworks here or embed a grid. I can build a full gallery layout if you want.&lt;/p&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- CONTACT --&gt;</p>
-<p class="p1">&lt;section id="contact"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;h2&gt;Contact&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Interested in commissions or visiting the studio? Send a message.&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;form onsubmit="event.preventDefault(); alert('Form demo only — connect backend to receive messages.');"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" placeholder="Your name" required&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="email" placeholder="Your email" required&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;textarea placeholder="Message" rows="5" required&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button type="submit"&gt;Send&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/form&gt;</p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <img src="YOUR-LOGO.png" alt="Studio Logo" class="logo"> <!-- Replace logo -->
+  <div class="tabs">
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Write a short intro about your art studio here — your style, medium,
+    philosophy, or background. Keep it warm, simple, and inviting.
+  </p>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <p>Add your artworks here or embed a grid. I can build a full gallery layout if you want.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Interested in commissions or visiting the studio? Send a message.</p>
+
+  <form onsubmit="event.preventDefault(); alert('Form demo only — connect backend to receive messages.');">
+    <input type="text" placeholder="Your name" required>
+    <input type="email" placeholder="Your email" required>
+    <textarea placeholder="Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
 </body>
 </html>
